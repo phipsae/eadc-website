@@ -1,70 +1,251 @@
-"use client";
-
-import Link from "next/link";
 import type { NextPage } from "next";
-import { useAccount } from "wagmi";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { Address } from "~~/components/scaffold-eth";
+import {
+  AcademicCapIcon,
+  ArrowRightIcon,
+  BanknotesIcon,
+  BeakerIcon,
+  BuildingOffice2Icon,
+  CheckCircleIcon,
+  CubeTransparentIcon,
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+} from "@heroicons/react/24/outline";
 
 const Home: NextPage = () => {
-  const { address: connectedAddress } = useAccount();
-
   return (
     <>
-      <div className="flex items-center flex-col grow pt-10">
-        <div className="px-5">
-          <h1 className="text-center">
-            <span className="block text-2xl mb-2">Welcome to</span>
-            <span className="block text-4xl font-bold">Scaffold-ETH 2</span>
-          </h1>
-          <div className="flex justify-center items-center space-x-2 flex-col">
-            <p className="my-2 font-medium">Connected Address:</p>
-            <Address address={connectedAddress} />
+      {/* Hero */}
+      <section className="bg-base-200">
+        <div className="max-w-6xl mx-auto px-6 pt-16 pb-20">
+          <div className="grid md:grid-cols-12 gap-10 items-center">
+            <div className="md:col-span-7">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+                Enterprise Ethereum Training & Certification
+              </h1>
+              <p className="mt-4 text-lg leading-relaxed text-base-content/80">
+                Upskill your teams with hands‑on labs taught by practitioners from the Ethereum Foundation and
+                BuidlGuidl — creators of tools like Scaffold‑ETH and SpeedRunEthereum. Practical, up to date,
+                production‑ready.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a href="#curriculum" className="btn btn-primary gap-2">
+                  View Curriculum
+                  <ArrowRightIcon className="h-4 w-4" />
+                </a>
+                <a href="#contact" className="btn btn-secondary">
+                  Talk to our team
+                </a>
+              </div>
+              <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-base-content/70">
+                <div className="flex items-center gap-2">
+                  <ShieldCheckIcon className="h-4 w-4" />
+                  <span>Up to date</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <BeakerIcon className="h-4 w-4" />
+                  <span>Lab‑driven</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <AcademicCapIcon className="h-4 w-4" />
+                  <span>Certification included</span>
+                </div>
+              </div>
+            </div>
+            <div className="md:col-span-5">
+              <div className="bg-base-100 rounded-2xl p-6 shadow-md">
+                <div className="flex items-center gap-3">
+                  <BuildingOffice2Icon className="h-6 w-6" />
+                  <p className="m-0 font-medium">Built for enterprises</p>
+                </div>
+                <ul className="mt-4 space-y-3 text-base-content/80">
+                  <li className="flex items-start gap-2">
+                    <CheckCircleIcon className="h-5 w-5 mt-0.5" />
+                    <span>Private cohorts (onsite or virtual)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircleIcon className="h-5 w-5 mt-0.5" />
+                    <span>Team dashboards and progress tracking</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircleIcon className="h-5 w-5 mt-0.5" />
+                    <span>Auto‑graded challenges + portfolio builds</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircleIcon className="h-5 w-5 mt-0.5" />
+                    <span>Security reviews and best practices baked in</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-
-          <p className="text-center text-lg">
-            Get started by editing{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/nextjs/app/page.tsx
-            </code>
-          </p>
-          <p className="text-center text-lg">
-            Edit your smart contract{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              YourContract.sol
-            </code>{" "}
-            in{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/hardhat/contracts
-            </code>
-          </p>
         </div>
+      </section>
 
-        <div className="grow bg-base-300 w-full mt-16 px-8 py-12">
-          <div className="flex justify-center items-center gap-12 flex-col md:flex-row">
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <BugAntIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Tinker with your smart contract using the{" "}
-                <Link href="/debug" passHref className="link">
-                  Debug Contracts
-                </Link>{" "}
-                tab.
+      {/* Value props */}
+      <section id="why-us" className="bg-base-100">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <BeakerIcon className="h-6 w-6" />
+              <p className="mt-3 font-medium">Hands‑on by design</p>
+              <p className="m-0 text-base-content/80">
+                Short theory, long labs. Ship smart contracts, scripts, and dashboards from day one.
               </p>
             </div>
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <MagnifyingGlassIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Explore your local transactions with the{" "}
-                <Link href="/blockexplorer" passHref className="link">
-                  Block Explorer
-                </Link>{" "}
-                tab.
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <AcademicCapIcon className="h-6 w-6" />
+              <p className="mt-3 font-medium">Taught by practitioners</p>
+              <p className="m-0 text-base-content/80">
+                Experts with mainnet experience from the Ethereum Foundation, BuidlGuidl and the wider ecosystem.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <ShieldCheckIcon className="h-6 w-6" />
+              <p className="mt-3 font-medium">Security‑first approach</p>
+              <p className="m-0 text-base-content/80">
+                Threat modeling, testing, and incident playbooks are embedded into every module.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <RocketLaunchIcon className="h-6 w-6" />
+              <p className="mt-3 font-medium">From labs to launch</p>
+              <p className="m-0 text-base-content/80">
+                Capstone builds that integrate with L2s and real data providers to prove readiness.
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Program format */}
+      <section id="programs" className="bg-base-200">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <h2 className="text-3xl font-bold">Program format</h2>
+          <div className="mt-8 grid md:grid-cols-4 gap-6">
+            <div className="bg-base-100 rounded-2xl p-6 shadow-md">
+              <p className="m-0 font-semibold">1 · Discovery</p>
+              <p className="m-0 text-base-content/80">Skills assessment and tailored learning path for your roles.</p>
+            </div>
+            <div className="bg-base-100 rounded-2xl p-6 shadow-md">
+              <p className="m-0 font-semibold">2 · Labs</p>
+              <p className="m-0 text-base-content/80">Guided, graded challenges to cement fundamentals.</p>
+            </div>
+            <div className="bg-base-100 rounded-2xl p-6 shadow-md">
+              <p className="m-0 font-semibold">3 · Builds</p>
+              <p className="m-0 text-base-content/80">
+                Team projects that integrate on‑chain components with real services.
+              </p>
+            </div>
+            <div className="bg-base-100 rounded-2xl p-6 shadow-md">
+              <p className="m-0 font-semibold">4 · Certification</p>
+              <p className="m-0 text-base-content/80">Verified credentials and on‑chain portfolios for participants.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Curriculum preview */}
+      <section id="curriculum" className="bg-base-100">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <h2 className="text-3xl font-bold">Curriculum preview</h2>
+          <p className="mt-2 text-base-content/80">
+            A modular path from fundamentals to production. Customize per role: engineering, product, security, DevOps.
+          </p>
+
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <p className="m-0 font-semibold">Foundations</p>
+              <p className="m-0 text-base-content/80">
+                EVM, accounts, transactions, gas, ERC standards, wallets, RPCs.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <p className="m-0 font-semibold">Smart contract development</p>
+              <p className="m-0 text-base-content/80">Solidity, testing, upgrades, access control, events, indexing.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <p className="m-0 font-semibold">DEX</p>
+              <p className="m-0 text-base-content/80">AMMs, liquidity, fees, slippage, price oracles, sandwich risk.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <p className="m-0 font-semibold">Stablecoins</p>
+              <p className="m-0 text-base-content/80">
+                Over‑collateralization, peg mechanisms, liquidations, risk controls.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <p className="m-0 font-semibold">Real‑World Assets (RWA)</p>
+              <p className="m-0 text-base-content/80">
+                Tokenization flows, custodians, attestations, compliance patterns.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <p className="m-0 font-semibold">Deploy to L2</p>
+              <p className="m-0 text-base-content/80">
+                Optimism/Base/Arbitrum, bridges, sequencing, costs, reliability.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <p className="m-0 font-semibold">Security</p>
+              <p className="m-0 text-base-content/80">
+                Threat modeling, common vulns, audits, monitoring, incident response.
+              </p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <p className="m-0 font-semibold">DevEx & Ops</p>
+              <p className="m-0 text-base-content/80">Tooling, CI, key management, change control, observability.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-base-200 shadow-md">
+              <p className="m-0 font-semibold">Capstone build</p>
+              <p className="m-0 text-base-content/80">
+                Ship a production‑grade prototype integrating multiple modules.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="bg-base-200">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <div className="grid md:grid-cols-12 gap-8 items-center">
+            <div className="md:col-span-7">
+              <h2 className="text-3xl font-bold">Talk to our team</h2>
+              <p className="mt-2 text-base-content/80">
+                Tell us about your goals and constraints. We’ll tailor a program for your engineers, product managers,
+                and security leads. Cohorts start every month.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a className="btn btn-primary" href="#">
+                  Book a discovery call
+                </a>
+                <a className="btn btn-secondary" href="mailto:contact@corporate-sre.example">
+                  Email us
+                </a>
+              </div>
+            </div>
+            <div className="md:col-span-5">
+              <div className="bg-base-100 rounded-2xl p-6 shadow-md">
+                <p className="m-0 font-medium">What you get</p>
+                <ul className="mt-4 space-y-3 text-base-content/80">
+                  <li className="flex items-start gap-2">
+                    <CubeTransparentIcon className="h-5 w-5 mt-0.5" />
+                    <span>Customized syllabus and schedule</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BanknotesIcon className="h-5 w-5 mt-0.5" />
+                    <span>Clear pricing and ROI model</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ShieldCheckIcon className="h-5 w-5 mt-0.5" />
+                    <span>Security and compliance alignment</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
