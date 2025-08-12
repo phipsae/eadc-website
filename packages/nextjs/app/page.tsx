@@ -87,7 +87,6 @@ const Home: NextPage = () => {
       {/* Value props */}
       <section id="why-us" className="bg-base-100">
         <div className="max-w-6xl mx-auto px-6 py-16">
-          <h2 className="text-3xl font-bold text-neutral">Why Corporate SRE</h2>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
               <BeakerIcon className="h-6 w-6 text-primary" />
