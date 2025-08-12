@@ -1,6 +1,3 @@
-"use client";
-
-import Link from "next/link";
 import type { NextPage } from "next";
 import {
   AcademicCapIcon,
@@ -209,15 +206,6 @@ const Home: NextPage = () => {
               </p>
             </div>
           </div>
-
-          <div className="mt-10 flex flex-wrap gap-3">
-            <a href="#contact" className="btn btn-primary">
-              Request a proposal
-            </a>
-            <Link href="/debug" className="btn btn-ghost">
-              See live dev tools
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -235,7 +223,7 @@ const Home: NextPage = () => {
                 <a className="btn btn-primary" href="#">
                   Book a discovery call
                 </a>
-                <a className="btn btn-secondary" href="mailto:contact@corporate-sre.example">
+                <a className="btn btn-secondary" href="mailto:austin.griffith@ethereum.org">
                   Email us
                 </a>
               </div>
