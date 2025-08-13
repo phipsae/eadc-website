@@ -42,7 +42,7 @@ const Home: NextPage = () => {
               <div className="mt-6 flex flex-wrap items-center gap-5 text-sm text-white/80">
                 <div className="flex items-center gap-2">
                   <ShieldCheckIcon className="h-4 w-4" />
-                  <span>Security‑first</span>
+                  <span>Up-to-date</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <BeakerIcon className="h-4 w-4" />
@@ -79,6 +79,22 @@ const Home: NextPage = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section className="bg-[#f1f5ff]">
+        <div className="max-w-6xl mx-auto px-6 py-6">
+          <div className="flex items-center justify-center gap-10">
+            <div className="flex flex-col gap-1">
+              <span className="text-xs text-base-content/70">By</span>
+              <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-8" />
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-xs text-base-content/70">Funded by</span>
+              <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10" />
             </div>
           </div>
         </div>
