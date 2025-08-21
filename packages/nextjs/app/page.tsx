@@ -15,14 +15,14 @@ const Home: NextPage = () => {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#0b1f44] via-[#162b66] to-[#0f766e] text-white">
+      <section className="bg-gradient-to-br from-[#0b1f44] via-[#162b66] to-[#14b8a6] text-white">
         <div className="max-w-6xl mx-auto px-6 pt-20 pb-24">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-7">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-                Enterprise Ethereum Training & Certification
+              <h1 className="text-5xl md:text-6xl font-medium tracking-tight pb-4">
+                Enterprise Ethereum <br /> Training & Certification
               </h1>
-              <p className="mt-5 text-lg leading-relaxed text-white/85">
+              <p className="mt-5 text-lg leading-relaxed text-white/85" style={{ maxWidth: "500px" }}>
                 Upskill your teams with hands‑on labs taught by practitioners from the Ethereum Foundation and
                 BuidlGuidl — creators of tools like Scaffold‑ETH and SpeedRunEthereum. Practical, secure,
                 production‑ready.
@@ -106,28 +106,28 @@ const Home: NextPage = () => {
       <section id="why-us" className="bg-base-100">
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-primary/50">
               <BeakerIcon className="h-6 w-6 text-primary" />
               <p className="mt-3 font-semibold text-neutral">Hands‑on by design</p>
               <p className="m-0 text-base-content/80">
                 Short theory, long labs. Ship smart contracts, scripts, and dashboards from day one.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-primary/50">
               <AcademicCapIcon className="h-6 w-6 text-primary" />
               <p className="mt-3 font-semibold text-neutral">Taught by practitioners</p>
               <p className="m-0 text-base-content/80">
                 Experts with mainnet experience from the Ethereum Foundation, BuidlGuidl and the wider ecosystem.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-primary/50">
               <ShieldCheckIcon className="h-6 w-6 text-primary" />
               <p className="mt-3 font-semibold text-neutral">Security‑first approach</p>
               <p className="m-0 text-base-content/80">
                 Threat modeling, testing, and incident playbooks are embedded into every module.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-primary/50">
               <RocketLaunchIcon className="h-6 w-6 text-primary" />
               <p className="mt-3 font-semibold text-neutral">From labs to launch</p>
               <p className="m-0 text-base-content/80">
@@ -237,10 +237,20 @@ const Home: NextPage = () => {
                 and security leads. Cohorts start every month.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a className="btn btn-primary" href="#">
+                <a
+                  className="btn btn-primary"
+                  href="https://calendly.com/austintgriffith"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Book a discovery call
                 </a>
-                <a className="btn btn-secondary" href="mailto:austin.griffith@ethereum.org">
+                <a
+                  className="btn btn-accent"
+                  href="mailto:austin.griffith@ethereum.org"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Email us
                 </a>
               </div>
