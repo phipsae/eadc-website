@@ -15,20 +15,20 @@ const Home: NextPage = () => {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#0b1f44] via-[#162b66] to-[#0f766e] text-white">
+      <section className="bg-gradient-to-br from-[#0b1f44] via-[#863AFF] to-[#14b8a6] text-white">
         <div className="max-w-6xl mx-auto px-6 pt-20 pb-24">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-7">
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-                Enterprise Ethereum Training & Certification
+              <h1 className="text-5xl md:text-6xl font-medium tracking-tight pb-4">
+                Enterprise Ethereum <br /> Training & Certification
               </h1>
-              <p className="mt-5 text-lg leading-relaxed text-white/85">
+              <p className="mt-5 text-lg leading-relaxed text-white/85" style={{ maxWidth: "500px" }}>
                 Upskill your teams with hands‑on labs taught by practitioners from the Ethereum Foundation and
                 BuidlGuidl — creators of tools like Scaffold‑ETH and SpeedRunEthereum. Practical, secure,
                 production‑ready.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <a href="#curriculum" className="btn btn-accent gap-2 shadow-lg">
+                <a href="#curriculum" className="btn btn-info gap-2 shadow-lg">
                   View Curriculum
                   <ArrowRightIcon className="h-4 w-4" />
                 </a>
@@ -85,7 +85,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Partners */}
-      <section className="bg-[#f1f5ff]">
+      <section className="bg-base-200">
         <div className="max-w-6xl mx-auto px-6 py-6">
           <div className="flex items-center justify-center gap-10">
             <div className="flex flex-col gap-1">
@@ -106,28 +106,28 @@ const Home: NextPage = () => {
       <section id="why-us" className="bg-base-100">
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
               <BeakerIcon className="h-6 w-6 text-primary" />
               <p className="mt-3 font-semibold text-neutral">Hands‑on by design</p>
               <p className="m-0 text-base-content/80">
                 Short theory, long labs. Ship smart contracts, scripts, and dashboards from day one.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
               <AcademicCapIcon className="h-6 w-6 text-primary" />
               <p className="mt-3 font-semibold text-neutral">Taught by practitioners</p>
               <p className="m-0 text-base-content/80">
                 Experts with mainnet experience from the Ethereum Foundation, BuidlGuidl and the wider ecosystem.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
               <ShieldCheckIcon className="h-6 w-6 text-primary" />
               <p className="mt-3 font-semibold text-neutral">Security‑first approach</p>
               <p className="m-0 text-base-content/80">
                 Threat modeling, testing, and incident playbooks are embedded into every module.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
               <RocketLaunchIcon className="h-6 w-6 text-primary" />
               <p className="mt-3 font-semibold text-neutral">From labs to launch</p>
               <p className="m-0 text-base-content/80">
@@ -174,49 +174,49 @@ const Home: NextPage = () => {
           </p>
 
           <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Foundations</p>
               <p className="m-0 text-base-content/80">
                 EVM, accounts, transactions, gas, ERC standards, wallets, RPCs.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Smart contract development</p>
               <p className="m-0 text-base-content/80">Solidity, testing, upgrades, access control, events, indexing.</p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">DEX</p>
               <p className="m-0 text-base-content/80">AMMs, liquidity, fees, slippage, price oracles, sandwich risk.</p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Stablecoins</p>
               <p className="m-0 text-base-content/80">
                 Over‑collateralization, peg mechanisms, liquidations, risk controls.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Real‑World Assets (RWA)</p>
               <p className="m-0 text-base-content/80">
                 Tokenization flows, custodians, attestations, compliance patterns.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Deploy to L2</p>
               <p className="m-0 text-base-content/80">
                 Optimism/Base/Arbitrum, bridges, sequencing, costs, reliability.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Security</p>
               <p className="m-0 text-base-content/80">
                 Threat modeling, common vulns, audits, monitoring, incident response.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">DevEx & Ops</p>
               <p className="m-0 text-base-content/80">Tooling, CI, key management, change control, observability.</p>
             </div>
-            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300">
+            <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Capstone build</p>
               <p className="m-0 text-base-content/80">
                 Ship a production‑grade prototype integrating multiple modules.
@@ -237,10 +237,15 @@ const Home: NextPage = () => {
                 and security leads. Cohorts start every month.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a className="btn btn-primary" href="#">
+                <a
+                  className="btn btn-primary"
+                  href="https://calendly.com/austintgriffith"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Book a discovery call
                 </a>
-                <a className="btn btn-secondary" href="mailto:austin.griffith@ethereum.org">
+                <a className="btn btn-info" href="mailto:austin.griffith@ethereum.org" target="_blank" rel="noreferrer">
                   Email us
                 </a>
               </div>
