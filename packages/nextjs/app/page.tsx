@@ -75,7 +75,7 @@ const Home: NextPage = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircleIcon className="h-5 w-5 mt-0.5" />
-                    <span>Security reviews and best practices baked in</span>
+                    <span>Security reviews and best practices built in</span>
                   </li>
                 </ul>
               </div>
