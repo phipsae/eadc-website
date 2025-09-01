@@ -15,12 +15,12 @@ const Home: NextPage = () => {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#0b1f44] via-[#863AFF] to-[#14b8a6] text-white">
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white">
         <div className="max-w-6xl mx-auto px-6 pt-20 pb-24">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-7">
-              <h1 className="text-5xl md:text-6xl font-medium tracking-tight pb-4">
-                Enterprise Ethereum <br /> Training & Certification
+              <h1 className="text-5xl font-bold tracking-tight pb-4">
+                Ethereum Application <br /> Developer Certification
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-white/85" style={{ maxWidth: "500px" }}>
                 Upskill your teams with hands‑on labs taught by practitioners from the Ethereum Foundation and
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
                 production‑ready.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <a href="#curriculum" className="btn btn-info gap-2 shadow-lg">
+                <a href="#curriculum" className="btn btn-primary gap-2 shadow-lg text-black">
                   View Curriculum
                   <ArrowRightIcon className="h-4 w-4" />
                 </a>
@@ -107,28 +107,28 @@ const Home: NextPage = () => {
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
-              <BeakerIcon className="h-6 w-6 text-primary" />
+              <BeakerIcon className="h-6 w-6 text-blue-800" />
               <p className="mt-3 font-semibold text-neutral">Hands‑on by design</p>
               <p className="m-0 text-base-content/80">
                 Short theory, long labs. Ship smart contracts, scripts, and dashboards from day one.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
-              <AcademicCapIcon className="h-6 w-6 text-primary" />
+              <AcademicCapIcon className="h-6 w-6 text-blue-800" />
               <p className="mt-3 font-semibold text-neutral">Taught by practitioners</p>
               <p className="m-0 text-base-content/80">
                 Experts with mainnet experience from the Ethereum Foundation, BuidlGuidl and the wider ecosystem.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
-              <ShieldCheckIcon className="h-6 w-6 text-primary" />
+              <ShieldCheckIcon className="h-6 w-6 text-blue-800" />
               <p className="mt-3 font-semibold text-neutral">Security‑first approach</p>
               <p className="m-0 text-base-content/80">
                 Threat modeling, testing, and incident playbooks are embedded into every module.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
-              <RocketLaunchIcon className="h-6 w-6 text-primary" />
+              <RocketLaunchIcon className="h-6 w-6 text-blue-800" />
               <p className="mt-3 font-semibold text-neutral">From labs to launch</p>
               <p className="m-0 text-base-content/80">
                 Capstone builds that integrate with L2s and real data providers to prove readiness.
@@ -238,14 +238,19 @@ const Home: NextPage = () => {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  className="btn btn-primary"
+                  className="btn btn-primary text-black"
                   href="https://calendly.com/austintgriffith"
                   target="_blank"
                   rel="noreferrer"
                 >
                   Book a discovery call
                 </a>
-                <a className="btn btn-info" href="mailto:austin.griffith@ethereum.org" target="_blank" rel="noreferrer">
+                <a
+                  className="btn btn-outline border-black"
+                  href="mailto:austin.griffith@ethereum.org"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Email us
                 </a>
               </div>
@@ -255,15 +260,15 @@ const Home: NextPage = () => {
                 <p className="m-0 font-medium">What you get</p>
                 <ul className="mt-4 space-y-3 text-base-content/80">
                   <li className="flex items-start gap-2">
-                    <CubeTransparentIcon className="h-5 w-5 mt-0.5" />
+                    <CubeTransparentIcon className="h-5 w-5 mt-0.5 text-blue-800" />
                     <span>Customized syllabus and schedule</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <BanknotesIcon className="h-5 w-5 mt-0.5" />
+                    <BanknotesIcon className="h-5 w-5 mt-0.5 text-blue-800" />
                     <span>Clear pricing and ROI model</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ShieldCheckIcon className="h-5 w-5 mt-0.5" />
+                    <ShieldCheckIcon className="h-5 w-5 mt-0.5 text-blue-800" />
                     <span>Security and compliance alignment</span>
                   </li>
                 </ul>

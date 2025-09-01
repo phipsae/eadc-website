@@ -14,7 +14,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = getMetadata({
-  title: "Ethereum Foundation Entreprise Certification",
+  title: "Ethereum Application Developer Certification",
   description:
     "Hands-on Ethereum training and certification for teams. Built by the Ethereum Foundation and BuidlGuidl.",
 });

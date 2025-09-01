@@ -3,7 +3,6 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
@@ -29,21 +28,12 @@ export const menuLinks: HeaderMenuLink[] = [
 ];
 
 export const HeaderMenuLinks = () => {
-  const pathname = usePathname();
-
   return (
     <>
       {menuLinks.map(({ label, href, icon }) => {
-        const isActive = pathname === href;
         return (
           <li key={href}>
-            <Link
-              href={href}
-              passHref
-              className={`${
-                isActive ? "bg-secondary shadow-md" : "bg-[#F2EBFF]"
-              } hover:bg-white focus:!bg-white active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
-            >
+            <Link href={href} passHref>
               {icon}
               <span>{label}</span>
             </Link>
@@ -64,16 +54,15 @@ export const Header = () => {
   });
 
   return (
-    <div className="sticky lg:static top-0 navbar bg-[#F2EBFF] min-h-0 shrink-0 justify-between z-20 shadow-md px-0 sm:px-2">
+    <div className="sticky lg:static top-0 navbar bg-base-200 min-h-0 shrink-0 justify-between z-20 shadow-md px-0 sm:px-2">
       <div className="navbar-start w-auto lg:w-1/2">
         <Link href="/" passHref className="flex items-center gap-2 ml-4 mr-4 lg:mr-10 shrink-0">
           <div className="flex relative w-8 h-8 lg:w-10 lg:h-10">
             <Image alt="Enterprise Ethereum logo" className="cursor-pointer" fill src="/logo-enterprise.svg" />
           </div>
           <div className="flex flex-col lg:flex">
-            <span className="font-bold leading-none text-sm lg:text-base">
-              Enterprise <br /> Ethereum Training
-            </span>
+            <span className="font-bold leading-none text-sm lg:text-base">Ethereum ADC</span>
+            <span className="text-xs"> Training & Certification</span>
           </div>
         </Link>
 

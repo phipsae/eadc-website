@@ -14,7 +14,7 @@
   name: "light";
 
   /* Corporate palette */
-  --color-primary: #863AFF; /* Purple */
+  --color-primary: #ff6868; /* Purple */
   --color-primary-content: #ffffff;
   --color-secondary: #E1FFFC; /* Teal 100 */
   --color-secondary-content: #ffffff;
@@ -23,7 +23,7 @@
   --color-neutral: #0b1f44; /* Navy */
   --color-neutral-content: #ffffff;
   --color-base-100: #ffffff; /* Surfaces */
-  --color-base-200: #F6F1FF; /* Page background */
+  --color-base-200: #f1f4ff; /* Page background */
   --color-base-300: #F2EBFF; /* Subtle panels */
   --color-base-content: #0b1f44; /* Text */
   --color-info: #00CFBA; /* Brand teal */
