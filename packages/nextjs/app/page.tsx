@@ -23,9 +23,9 @@ const Home: NextPage = () => {
                 Ethereum Application <br /> Developer Certification
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-white/85" style={{ maxWidth: "500px" }}>
-                Upskill your teams with hands‑on labs taught by practitioners from the Ethereum Foundation and
-                BuidlGuidl — creators of tools like Scaffold‑ETH and SpeedRunEthereum. Practical, secure,
-                production‑ready.
+                Equip your teams with advanced training in smart contracts, decentralized exchanges, real-world assets,
+                stablecoins, and security. Structured for institutional standards — compliant, resilient, and
+                deployment-ready.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a href="#curriculum" className="btn btn-primary gap-2 shadow-lg text-black">
