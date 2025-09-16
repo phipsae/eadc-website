@@ -239,7 +239,7 @@ const Home: NextPage = () => {
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
                   className="btn btn-primary text-black"
-                  href="https://calendly.com/austintgriffith"
+                  href="https://calendly.com/austintgriffith/eadc-ethereum-application-developer-certification"
                   target="_blank"
                   rel="noreferrer"
                 >
