@@ -84,24 +84,6 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      {/* Partners */}
-      <section className="bg-base-200">
-        <div className="max-w-6xl mx-auto px-6 py-6">
-          <div className="flex items-center justify-center gap-10">
-            <div className="flex flex-col gap-1">
-              <span className="text-xs text-base-content/70">By</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-8" />
-            </div>
-            <div className="flex flex-col gap-1">
-              <span className="text-xs text-base-content/70">Funded by</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Value props */}
       <section id="why-us" className="bg-base-100">
         <div className="max-w-6xl mx-auto px-6 py-16">
@@ -273,6 +255,24 @@ const Home: NextPage = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section className="bg-base-200">
+        <div className="max-w-6xl mx-auto px-6 py-6">
+          <div className="flex items-center justify-center gap-10">
+            <div className="flex flex-col gap-1">
+              <span className="text-xs text-base-content/70">Built By</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-8" />
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="text-xs text-base-content/70">Operated By</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10" />
             </div>
           </div>
         </div>
