@@ -9,6 +9,7 @@ import {
   CubeTransparentIcon,
   RocketLaunchIcon,
   ShieldCheckIcon,
+  UsersIcon,
 } from "@heroicons/react/24/outline";
 
 const Home: NextPage = () => {
@@ -23,13 +24,13 @@ const Home: NextPage = () => {
                 Ethereum Application <br /> Developer Certification
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-white/85" style={{ maxWidth: "500px" }}>
-                Equip your teams with advanced training in smart contracts, decentralized exchanges, real-world assets,
-                stablecoins, and security. Structured for institutional standards — compliant, resilient, and
-                deployment-ready.
+                Equip your team with advanced training in onchain application development, mastering smart contracts,
+                decentralized exchanges, real-world assets, stablecoins, and security. Structured for institutional
+                requirements — compliant, resilient, and deployment-ready.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a href="#curriculum" className="btn btn-primary gap-2 shadow-lg text-black">
-                  View Curriculum
+                  View curriculum
                   <ArrowRightIcon className="h-4 w-4" />
                 </a>
                 <a
@@ -63,7 +64,7 @@ const Home: NextPage = () => {
                 <ul className="mt-4 space-y-3 text-white/85">
                   <li className="flex items-start gap-2">
                     <CheckCircleIcon className="h-5 w-5 mt-0.5" />
-                    <span>Private cohorts (onsite or virtual)</span>
+                    <span>Private, tailored cohorts (onsite or virtual) </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircleIcon className="h-5 w-5 mt-0.5" />
@@ -71,7 +72,7 @@ const Home: NextPage = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircleIcon className="h-5 w-5 mt-0.5" />
-                    <span>Auto‑graded challenges + portfolio builds</span>
+                    <span>Auto-graded challenges and portfolio builds</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircleIcon className="h-5 w-5 mt-0.5" />
@@ -85,7 +86,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Value props */}
-      <section id="why-us" className="bg-base-100">
+      <section id="why-adc" className="bg-base-100">
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
@@ -99,7 +100,7 @@ const Home: NextPage = () => {
               <AcademicCapIcon className="h-6 w-6 text-blue-800" />
               <p className="mt-3 font-semibold text-neutral">Taught by practitioners</p>
               <p className="m-0 text-base-content/80">
-                Experts with mainnet experience from the Ethereum Foundation, BuidlGuidl and the wider ecosystem.
+                Mainnet experts from the Ethereum Foundation, BuidlGuidl, and the Ethereum ecosystem.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-[#F6F1FF] hover:shadow-base-200 hover:scale-105 hover:border-accent">
@@ -113,7 +114,7 @@ const Home: NextPage = () => {
               <RocketLaunchIcon className="h-6 w-6 text-blue-800" />
               <p className="mt-3 font-semibold text-neutral">From labs to launch</p>
               <p className="m-0 text-base-content/80">
-                Capstone builds that integrate with L2s and real data providers to prove readiness.
+                Capstone builds integrate with L2s and real data providers to prove application readiness.
               </p>
             </div>
           </div>
@@ -121,27 +122,37 @@ const Home: NextPage = () => {
       </section>
 
       {/* Program format */}
-      <section id="programs" className="bg-base-200">
+      <section id="program" className="bg-base-200">
         <div className="max-w-6xl mx-auto px-6 py-16">
           <h2 className="text-3xl font-bold text-neutral">Program format</h2>
+          <p className="mt-2 text-base-content/80">
+            Each cohort’s program is tailored to meet your business needs, providing hands-on learning for targeted use
+            cases
+          </p>
           <div className="mt-8 grid md:grid-cols-4 gap-6">
             <div className="bg-base-100 rounded-2xl p-6 shadow-sm border border-base-300">
               <p className="m-0 font-semibold">1 · Discovery</p>
-              <p className="m-0 text-base-content/80">Skills assessment and tailored learning path for your roles.</p>
+              <p className="m-0 text-base-content/80">
+                Comprehensive skill assessments inform a tailored learning path for your teams roles and backgrounds
+              </p>
             </div>
             <div className="bg-base-100 rounded-2xl p-6 shadow-sm border border-base-300">
               <p className="m-0 font-semibold">2 · Labs</p>
-              <p className="m-0 text-base-content/80">Guided, graded challenges to cement fundamentals.</p>
+              <p className="m-0 text-base-content/80">
+                Experts from the Ethereum Foundation and beyond lead guided, graded challenges to cement fundamentals
+              </p>
             </div>
             <div className="bg-base-100 rounded-2xl p-6 shadow-sm border border-base-300">
               <p className="m-0 font-semibold">3 · Builds</p>
               <p className="m-0 text-base-content/80">
-                Team projects that integrate on‑chain components with real services.
+                Team projects integrate onchain components with real services, informing actionable deployment skills
               </p>
             </div>
             <div className="bg-base-100 rounded-2xl p-6 shadow-sm border border-base-300">
               <p className="m-0 font-semibold">4 · Certification</p>
-              <p className="m-0 text-base-content/80">Verified credentials and on‑chain portfolios for participants.</p>
+              <p className="m-0 text-base-content/80">
+                Participants develop onchain portfolios, and can qualify for verified credentials to demonstrate success
+              </p>
             </div>
           </div>
         </div>
@@ -150,59 +161,56 @@ const Home: NextPage = () => {
       {/* Curriculum preview */}
       <section id="curriculum" className="bg-base-100">
         <div className="max-w-6xl mx-auto px-6 py-16">
-          <h2 className="text-3xl font-bold text-neutral">Curriculum preview</h2>
+          <h2 className="text-3xl font-bold text-neutral">Curriculum overview</h2>
           <p className="mt-2 text-base-content/80">
-            A modular path from fundamentals to production. Customize per role: engineering, product, security, DevOps.
+            A modular path from fundamentals to production. Customize curriculum per role, including engineering,
+            product, security, and DevOps
           </p>
 
           <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Foundations</p>
-              <p className="m-0 text-base-content/80">
-                EVM, accounts, transactions, gas, ERC standards, wallets, RPCs.
-              </p>
+              <p className="m-0 text-base-content/80">EVM, accounts, transactions, gas, ERC standards, wallets, RPCs</p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Smart contract development</p>
-              <p className="m-0 text-base-content/80">Solidity, testing, upgrades, access control, events, indexing.</p>
+              <p className="m-0 text-base-content/80">Solidity, testing, upgrades, access control, events, indexing</p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
-              <p className="m-0 font-semibold">DEX</p>
-              <p className="m-0 text-base-content/80">AMMs, liquidity, fees, slippage, price oracles, sandwich risk.</p>
+              <p className="m-0 font-semibold">Decentralized exchange (DEX)</p>
+              <p className="m-0 text-base-content/80">AMMs, liquidity, fees, slippage, price oracles, sandwich risk</p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Stablecoins</p>
               <p className="m-0 text-base-content/80">
-                Over‑collateralization, peg mechanisms, liquidations, risk controls.
+                Over‑collateralization, peg mechanisms, liquidations, risk controls
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
-              <p className="m-0 font-semibold">Real‑World Assets (RWA)</p>
+              <p className="m-0 font-semibold">Real‑world assets (RWA)</p>
               <p className="m-0 text-base-content/80">
-                Tokenization flows, custodians, attestations, compliance patterns.
+                Tokenization flows, custodians, attestations, compliance patterns
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Deploy to L2</p>
               <p className="m-0 text-base-content/80">
-                Optimism/Base/Arbitrum, bridges, sequencing, costs, reliability.
+                Optimism/Base/Arbitrum, bridges, sequencing, costs, reliability
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Security</p>
               <p className="m-0 text-base-content/80">
-                Threat modeling, common vulns, audits, monitoring, incident response.
+                Threat modeling, common vulnerabilities, audits, monitoring, incident response
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">DevEx & Ops</p>
-              <p className="m-0 text-base-content/80">Tooling, CI, key management, change control, observability.</p>
+              <p className="m-0 text-base-content/80">Tooling, CI, key management, change control, observability</p>
             </div>
             <div className="p-6 rounded-2xl bg-base-100 shadow-sm border border-base-300 transition-all duration-300 hover:bg-base-200">
               <p className="m-0 font-semibold">Capstone build</p>
-              <p className="m-0 text-base-content/80">
-                Ship a production‑grade prototype integrating multiple modules.
-              </p>
+              <p className="m-0 text-base-content/80">Ship a production‑grade prototype integrating multiple modules</p>
             </div>
           </div>
         </div>
@@ -239,7 +247,7 @@ const Home: NextPage = () => {
             </div>
             <div className="md:col-span-5">
               <div className="bg-base-100 rounded-2xl p-6 shadow-sm border border-base-300">
-                <p className="m-0 font-medium">What you get</p>
+                <p className="m-0 font-medium">Ethereum ADC enterprise offering</p>
                 <ul className="mt-4 space-y-3 text-base-content/80">
                   <li className="flex items-start gap-2">
                     <CubeTransparentIcon className="h-5 w-5 mt-0.5 text-blue-800" />
@@ -252,6 +260,14 @@ const Home: NextPage = () => {
                   <li className="flex items-start gap-2">
                     <ShieldCheckIcon className="h-5 w-5 mt-0.5 text-blue-800" />
                     <span>Security and compliance alignment</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <BuildingOffice2Icon className="h-5 w-5 mt-0.5 text-blue-800" />
+                    <span>Team dashboards and tooling</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <UsersIcon className="h-5 w-5 mt-0.5 text-blue-800" />
+                    <span>Onsite or virtual cohort</span>
                   </li>
                 </ul>
               </div>
@@ -266,13 +282,18 @@ const Home: NextPage = () => {
           <div className="flex items-center justify-center gap-10">
             <div className="flex flex-col gap-1">
               <span className="text-xs text-base-content/70">Built By</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-8" />
+              <a href="https://buidlguidl.com/" target="_blank" rel="noreferrer">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-8" />
+              </a>
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-xs text-base-content/70">Operated By</span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10" />
+              {}
+              <a href="https://ethereum.foundation/" target="_blank" rel="noreferrer">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10" />
+              </a>
             </div>
           </div>
         </div>

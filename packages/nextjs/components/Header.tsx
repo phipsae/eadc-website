@@ -14,16 +14,20 @@ type HeaderMenuLink = {
 
 export const menuLinks: HeaderMenuLink[] = [
   {
-    label: "Programs",
-    href: "/#programs",
+    label: "Program",
+    href: "/#program",
   },
   {
     label: "Curriculum",
     href: "/#curriculum",
   },
   {
-    label: "Why us",
-    href: "/#why-us",
+    label: "Why ADC",
+    href: "/#why-adc",
+  },
+  {
+    label: "Get started",
+    href: "/#contact",
   },
 ];
 
