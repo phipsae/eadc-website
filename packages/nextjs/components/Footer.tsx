@@ -22,6 +22,12 @@ export const Footer = () => {
               </a>
             </div>
             <span>·</span>
+            <div className="text-center">
+              <a href="/terms-and-conditions" className="link">
+                Terms & Conditions
+              </a>
+            </div>
+            <span>·</span>
             <div className="flex justify-center items-center gap-2">
               <p className="m-0 text-center">
                 Built with <HeartIcon className="inline-block h-4 w-4" /> at
