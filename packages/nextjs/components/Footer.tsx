@@ -41,7 +41,6 @@ export const Footer = () => {
                 <BuidlGuidlLogo className="w-3 h-5 pb-1" />
                 <span className="link">BuidlGuidl</span>
               </a>
-              <span>...</span>
             </div>
           </div>
         </ul>
