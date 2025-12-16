@@ -22,9 +22,9 @@ const Home: NextPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center">
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-[#0c1018]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(0,212,170,0.06)_0%,_transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(91,125,239,0.04)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[#0a1628]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(201,162,39,0.06)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(74,124,188,0.06)_0%,_transparent_60%)]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl">
@@ -60,15 +60,15 @@ const Home: NextPage = () => {
             {/* Trust indicators */}
             <div className="flex flex-wrap gap-12 text-sm text-white/40">
               <div className="flex items-center gap-3">
-                <ShieldCheckIcon className="h-5 w-5 text-[#00d4aa]" />
+                <ShieldCheckIcon className="h-5 w-5 text-[#c9a227]" />
                 <span>Compliance-Ready</span>
               </div>
               <div className="flex items-center gap-3">
-                <LockClosedIcon className="h-5 w-5 text-[#00d4aa]" />
+                <LockClosedIcon className="h-5 w-5 text-[#c9a227]" />
                 <span>Security-First</span>
               </div>
               <div className="flex items-center gap-3">
-                <DocumentCheckIcon className="h-5 w-5 text-[#00d4aa]" />
+                <DocumentCheckIcon className="h-5 w-5 text-[#c9a227]" />
                 <span>Verifiable Credentials</span>
               </div>
             </div>
@@ -249,7 +249,7 @@ const Home: NextPage = () => {
                 icon: AcademicCapIcon,
               },
             ].map((item, index) => (
-              <div key={index} className="bg-[#0c1018] p-8">
+              <div key={index} className="bg-[#0a1628] p-8">
                 <span className="step-indicator">{item.step}</span>
                 <h3 className="text-lg font-semibold text-white mt-4 mb-3">{item.title}</h3>
                 <p className="text-white/50 m-0 text-sm leading-relaxed">{item.description}</p>
@@ -308,7 +308,7 @@ const Home: NextPage = () => {
                 topics: "End-to-end deployment of a production-grade institutional application",
               },
             ].map((item, index) => (
-              <div key={index} className="bg-[#0c1018] p-6 hover:bg-white/[0.02] transition-colors">
+              <div key={index} className="bg-[#0a1628] p-6 hover:bg-white/[0.02] transition-colors">
                 <h3 className="text-white font-semibold mb-2">{item.title}</h3>
                 <p className="text-white/40 text-sm m-0">{item.topics}</p>
               </div>
@@ -371,19 +371,19 @@ const Home: NextPage = () => {
 
               <div className="grid grid-cols-2 gap-6 text-sm">
                 <div className="flex items-center gap-3 text-white/50">
-                  <GlobeAltIcon className="h-5 w-5 text-[#00d4aa]" />
+                  <GlobeAltIcon className="h-5 w-5 text-[#c9a227]" />
                   <span>Global Delivery</span>
                 </div>
                 <div className="flex items-center gap-3 text-white/50">
-                  <ClockIcon className="h-5 w-5 text-[#00d4aa]" />
+                  <ClockIcon className="h-5 w-5 text-[#c9a227]" />
                   <span>Flexible Scheduling</span>
                 </div>
                 <div className="flex items-center gap-3 text-white/50">
-                  <BuildingOffice2Icon className="h-5 w-5 text-[#00d4aa]" />
+                  <BuildingOffice2Icon className="h-5 w-5 text-[#c9a227]" />
                   <span>Onsite Available</span>
                 </div>
                 <div className="flex items-center gap-3 text-white/50">
-                  <UserGroupIcon className="h-5 w-5 text-[#00d4aa]" />
+                  <UserGroupIcon className="h-5 w-5 text-[#c9a227]" />
                   <span>Teams of 5-50+</span>
                 </div>
               </div>
@@ -402,7 +402,7 @@ const Home: NextPage = () => {
                   "Verifiable on-chain credentials",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-4">
-                    <CheckIcon className="h-5 w-5 text-[#00d4aa] mt-0.5 shrink-0" />
+                    <CheckIcon className="h-5 w-5 text-[#c9a227] mt-0.5 shrink-0" />
                     <span className="text-white/70">{item}</span>
                   </li>
                 ))}

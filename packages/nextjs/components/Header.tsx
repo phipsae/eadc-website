@@ -58,7 +58,7 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full">
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-[#0c1018]/95 backdrop-blur-md border-b border-white/5" />
+      <div className="absolute inset-0 bg-[#0a1628]/95 backdrop-blur-md border-b border-white/5" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -92,7 +92,7 @@ export const Header = () => {
                 <Bars3Icon className="h-6 w-6 text-white" />
               </summary>
               <div className="dropdown-content mt-2 p-0 w-screen max-w-[300px] right-0">
-                <div className="bg-[#0f141e] border border-white/10 shadow-2xl">
+                <div className="bg-[#0e1c36] border border-white/10 shadow-2xl">
                   <div className="p-5 border-b border-white/5">
                     <div className="flex items-center justify-between">
                       <span className="text-white/40 text-xs uppercase tracking-[0.15em]">Navigation</span>

@@ -35,23 +35,23 @@
 @plugin "daisyui/theme" {
   name: "dark";
 
-  /* Professional corporate dark palette */
-  --color-primary: #00d4aa;
-  --color-primary-content: #000000;
-  --color-secondary: #141a26;
+  /* Conservative Corporate Blue palette */
+  --color-primary: #c9a227; /* Gold accent */
+  --color-primary-content: #0a1628;
+  --color-secondary: #1a2744; /* Elevated navy */
   --color-secondary-content: #ffffff;
-  --color-accent: #5b7def;
+  --color-accent: #4a7cbc; /* Corporate blue */
   --color-accent-content: #ffffff;
-  --color-neutral: #0c1018;
+  --color-neutral: #0a1628; /* Deep navy */
   --color-neutral-content: #ffffff;
-  --color-base-100: #0c1018;
-  --color-base-200: #0f141e;
-  --color-base-300: #161d2a;
-  --color-base-content: #ffffff;
-  --color-info: #5b7def;
-  --color-success: #00d4aa;
-  --color-warning: #f5a623;
-  --color-error: #e54d4d;
+  --color-base-100: #0a1628; /* Main background - deep navy */
+  --color-base-200: #0e1c36; /* Elevated surfaces */
+  --color-base-300: #152240; /* Cards/panels */
+  --color-base-content: #ffffff; /* Text */
+  --color-info: #4a7cbc; /* Corporate blue */
+  --color-success: #4a9d6e;
+  --color-warning: #c9a227;
+  --color-error: #c54b4b;
 
   /* Sharp professional corners */
   --radius-field: 0;
@@ -79,7 +79,7 @@
       "Segoe UI",
       Roboto,
       sans-serif;
-    background: #0c1018;
+    background: #0a1628;
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -129,7 +129,7 @@
 
 :root,
 [data-theme] {
-  background: #0c1018;
+  background: #0a1628;
 }
 
 /* Professional button styles */
@@ -145,11 +145,11 @@
 }
 
 .btn-primary {
-  @apply bg-[#00d4aa] text-[#0c1018] font-semibold;
+  @apply bg-[#c9a227] text-[#0a1628] font-semibold;
 }
 
 .btn-primary:hover {
-  @apply bg-[#00b896];
+  @apply bg-[#b8921f];
 }
 
 .btn-outline {
@@ -168,7 +168,7 @@
   opacity: 80%;
 }
 
-/* Professional card styles */
+/* Card styles */
 .corp-card {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -180,7 +180,7 @@
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-/* Feature highlight with accent */
+/* Feature card with left accent */
 .feature-highlight {
   position: relative;
   padding-left: 1.5rem;
@@ -193,18 +193,18 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #00d4aa 0%, #5b7def 100%);
+  background: linear-gradient(180deg, #c9a227 0%, #4a7cbc 100%);
 }
 
 /* Gradient text for headlines */
 .gradient-text {
-  background: linear-gradient(135deg, #00d4aa 0%, #5b7def 100%);
+  background: linear-gradient(135deg, #c9a227 0%, #4a7cbc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Stat styling */
+/* Stats with underline accent */
 .stat-block {
   position: relative;
   padding-bottom: 1.5rem;
@@ -217,7 +217,7 @@
   left: 0;
   width: 48px;
   height: 2px;
-  background: #00d4aa;
+  background: #c9a227;
 }
 
 /* Section separator */
@@ -230,19 +230,8 @@
 .quote-accent {
   font-size: 100px;
   line-height: 0.8;
-  color: rgba(0, 212, 170, 0.1);
+  color: rgba(201, 162, 39, 0.15);
   font-family: Georgia, "Times New Roman", serif;
-}
-
-/* Logo trust bar */
-.logo-trust {
-  filter: brightness(0) invert(1);
-  opacity: 0.4;
-  transition: opacity 0.3s ease;
-}
-
-.logo-trust:hover {
-  opacity: 0.7;
 }
 
 /* Arrow link animation */
@@ -250,7 +239,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #00d4aa;
+  color: #c9a227;
   font-weight: 500;
   transition: gap 0.2s ease;
 }
@@ -268,41 +257,30 @@
   text-transform: uppercase;
 }
 
-/* Grid table style for curriculum */
-.grid-table {
-  display: grid;
-  gap: 1px;
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.grid-table > * {
-  background: #0c1018;
-}
-
 /* Enterprise badge */
 .enterprise-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(0, 212, 170, 0.08);
-  border: 1px solid rgba(0, 212, 170, 0.2);
+  background: rgba(201, 162, 39, 0.08);
+  border: 1px solid rgba(201, 162, 39, 0.2);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #00d4aa;
+  color: #c9a227;
 }
 
-/* Subtle glow effect for important elements */
+/* Subtle glow effect */
 .glow-subtle {
-  box-shadow: 0 0 60px rgba(0, 212, 170, 0.08);
+  box-shadow: 0 0 60px rgba(74, 124, 188, 0.08);
 }
 
 /* Professional focus states */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #00d4aa;
+  outline: 2px solid #c9a227;
   outline-offset: 2px;
 }
 
