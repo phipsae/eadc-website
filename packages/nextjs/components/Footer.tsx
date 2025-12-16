@@ -1,50 +1,140 @@
 import React from "react";
-import { HeartIcon } from "@heroicons/react/24/outline";
-import { BuidlGuidlLogo } from "~~/components/assets/BuidlGuidlLogo";
+import Link from "next/link";
 
 /**
- * Site footer
+ * Professional corporate footer
  */
 export const Footer = () => {
   return (
-    <div className="min-h-0 py-5 px-1 mb-11 lg:mb-0">
-      <div className="w-full">
-        <ul className="menu menu-horizontal w-full">
-          <div className="flex justify-center items-center gap-2 text-sm w-full">
-            <div className="text-center">
+    <footer className="border-t border-white/5 bg-[#0c1018]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 mb-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-enterprise.svg" alt="Ethereum ADC" className="h-9 w-9" />
+              <div>
+                <p className="m-0 font-semibold text-white tracking-tight">Ethereum ADC</p>
+                <p className="m-0 text-white/30 text-[10px] uppercase tracking-[0.1em]">Enterprise Training</p>
+              </div>
+            </div>
+            <p className="text-white/40 text-sm max-w-sm m-0 leading-relaxed mb-6">
+              Institutional-grade blockchain training and certification for enterprise technology teams. Developed in
+              partnership with the Ethereum Foundation.
+            </p>
+            <div className="flex items-center gap-6">
               <a
-                href="https://github.com/BuidlGuidl/ethereum-enterprise-credentials"
+                href="https://ethereum.foundation/"
                 target="_blank"
                 rel="noreferrer"
-                className="link"
+                className="opacity-40 hover:opacity-70 transition-opacity"
               >
-                Fork me
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-8" />
               </a>
-            </div>
-            <span>·</span>
-            <div className="text-center">
-              <a href="/terms-and-conditions" className="link">
-                Terms & Conditions
-              </a>
-            </div>
-            <span>·</span>
-            <div className="flex justify-center items-center gap-2">
-              <p className="m-0 text-center">
-                Built with <HeartIcon className="inline-block h-4 w-4" /> at
-              </p>
               <a
-                className="flex justify-center items-center gap-1"
                 href="https://buidlguidl.com/"
                 target="_blank"
                 rel="noreferrer"
+                className="opacity-40 hover:opacity-70 transition-opacity"
               >
-                <BuidlGuidlLogo className="w-3 h-5 pb-1" />
-                <span className="link">BuidlGuidl</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-6" />
               </a>
             </div>
           </div>
-        </ul>
+
+          {/* Program Links */}
+          <div>
+            <h4 className="text-white/30 text-[10px] uppercase tracking-[0.2em] mb-6">Program</h4>
+            <ul className="space-y-4 list-none p-0 m-0">
+              <li>
+                <Link href="/#why-adc" className="text-white/50 hover:text-white transition-colors text-sm">
+                  Why ADC
+                </Link>
+              </li>
+              <li>
+                <Link href="/#program" className="text-white/50 hover:text-white transition-colors text-sm">
+                  Program Structure
+                </Link>
+              </li>
+              <li>
+                <Link href="/#curriculum" className="text-white/50 hover:text-white transition-colors text-sm">
+                  Curriculum
+                </Link>
+              </li>
+              <li>
+                <Link href="/#contact" className="text-white/50 hover:text-white transition-colors text-sm">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-white/30 text-[10px] uppercase tracking-[0.2em] mb-6">Resources</h4>
+            <ul className="space-y-4 list-none p-0 m-0">
+              <li>
+                <a
+                  href="https://institutions.ethereum.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white/50 hover:text-white transition-colors text-sm"
+                >
+                  Ethereum for Institutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://ethereum.foundation/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white/50 hover:text-white transition-colors text-sm"
+                >
+                  Ethereum Foundation
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://ethereum.org/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white/50 hover:text-white transition-colors text-sm"
+                >
+                  ethereum.org
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom bar */}
+        <div className="mt-16 pt-8 border-t border-white/5">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-white/30 text-sm m-0">
+              © {new Date().getFullYear()} Ethereum Foundation. All rights reserved.
+            </p>
+            <div className="flex items-center gap-8">
+              <Link
+                href="/terms-and-conditions"
+                className="text-white/30 hover:text-white/50 text-sm transition-colors"
+              >
+                Terms & Conditions
+              </Link>
+              <a
+                href="https://ethereum.org/en/privacy-policy/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-white/30 hover:text-white/50 text-sm transition-colors"
+              >
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };

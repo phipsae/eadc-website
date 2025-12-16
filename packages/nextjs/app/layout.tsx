@@ -23,7 +23,7 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (
     <html suppressHydrationWarning className={`${dmSans.variable}`}>
       <body>
-        <ThemeProvider forcedTheme="light" enableSystem={false} defaultTheme="light">
+        <ThemeProvider forcedTheme="dark" enableSystem={false} defaultTheme="dark">
           <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
         </ThemeProvider>
       </body>
