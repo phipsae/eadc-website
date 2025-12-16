@@ -22,8 +22,8 @@ const Home: NextPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center">
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-[#0a1628]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(201,162,39,0.06)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[#0a0e1a]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(0,212,170,0.06)_0%,_transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(74,124,188,0.06)_0%,_transparent_60%)]" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
@@ -60,15 +60,15 @@ const Home: NextPage = () => {
             {/* Trust indicators */}
             <div className="flex flex-wrap gap-12 text-sm text-white/40">
               <div className="flex items-center gap-3">
-                <ShieldCheckIcon className="h-5 w-5 text-[#c9a227]" />
+                <ShieldCheckIcon className="h-5 w-5 text-[#00d4aa]" />
                 <span>Compliance-Ready</span>
               </div>
               <div className="flex items-center gap-3">
-                <LockClosedIcon className="h-5 w-5 text-[#c9a227]" />
+                <LockClosedIcon className="h-5 w-5 text-[#00d4aa]" />
                 <span>Security-First</span>
               </div>
               <div className="flex items-center gap-3">
-                <DocumentCheckIcon className="h-5 w-5 text-[#c9a227]" />
+                <DocumentCheckIcon className="h-5 w-5 text-[#00d4aa]" />
                 <span>Verifiable Credentials</span>
               </div>
             </div>
@@ -91,7 +91,7 @@ const Home: NextPage = () => {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10 lg:h-12" />
               </a>
-              <div className="h-8 w-px bg-white/20" />
+              <div className="h-8 w-px bg-white/10" />
               <a
                 href="https://buidlguidl.com/"
                 target="_blank"
@@ -106,20 +106,25 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      {/* Market Context Section */}
-      <section className="py-24 lg:py-32">
+      {/* Market Context Section - LIGHT */}
+      <section className="py-24 lg:py-32 bg-[#f8f9fc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
+              <h2 className="text-3xl lg:text-4xl font-semibold text-[#0a0e1a] mb-6">
                 The Institutional Shift to Blockchain is Accelerating
               </h2>
-              <p className="text-white/50 text-lg leading-relaxed mb-8">
+              <p className="text-[#0a0e1a]/60 text-lg leading-relaxed mb-8">
                 Global financial institutions are rapidly adopting Ethereum for tokenization, settlement, and digital
                 asset infrastructure. Your teams need the expertise to build, evaluate, and manage blockchain-based
                 systems.
               </p>
-              <a href="https://institutions.ethereum.org" target="_blank" rel="noreferrer" className="arrow-link">
+              <a
+                href="https://institutions.ethereum.org"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-[#0a0e1a] font-medium hover:gap-3 transition-all"
+              >
                 Explore Institutional Ethereum <ArrowRightIcon className="h-4 w-4" />
               </a>
             </div>
@@ -131,10 +136,10 @@ const Home: NextPage = () => {
                 { value: "10+", label: "Years Uptime", sublabel: "Zero downtime" },
                 { value: "$105B", label: "Network Security", sublabel: "Staked value" },
               ].map((stat, index) => (
-                <div key={index} className="stat-block">
-                  <p className="text-3xl lg:text-4xl font-semibold text-white mb-1">{stat.value}</p>
-                  <p className="text-white/70 font-medium m-0">{stat.label}</p>
-                  <p className="text-white/40 text-sm m-0">{stat.sublabel}</p>
+                <div key={index} className="stat-block-light">
+                  <p className="text-3xl lg:text-4xl font-semibold text-[#0a0e1a] mb-1">{stat.value}</p>
+                  <p className="text-[#0a0e1a]/70 font-medium m-0">{stat.label}</p>
+                  <p className="text-[#0a0e1a]/40 text-sm m-0">{stat.sublabel}</p>
                 </div>
               ))}
             </div>
@@ -142,17 +147,14 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="section-line max-w-7xl mx-auto" />
-
-      {/* Value Proposition */}
-      <section id="why-adc" className="py-24 lg:py-32">
+      {/* Value Proposition - LIGHT */}
+      <section id="why-adc" className="py-24 lg:py-32 bg-[#f8f9fc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">
+            <h2 className="text-3xl lg:text-4xl font-semibold text-[#0a0e1a] mb-6">
               Why Leading Institutions Choose Our Program
             </h2>
-            <p className="text-lg text-white/50">
+            <p className="text-lg text-[#0a0e1a]/50">
               Purpose-built training that meets the rigorous standards of regulated financial institutions.
             </p>
           </div>
@@ -196,17 +198,14 @@ const Home: NextPage = () => {
                   "Move beyond theory. Capstone projects deploy to testnets and integrate with real infrastructure providers and L2 networks.",
               },
             ].map((item, index) => (
-              <div key={index} className="feature-highlight">
-                <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
-                <p className="text-white/50 m-0 leading-relaxed text-sm">{item.description}</p>
+              <div key={index} className="feature-highlight-light">
+                <h3 className="text-lg font-semibold text-[#0a0e1a] mb-3">{item.title}</h3>
+                <p className="text-[#0a0e1a]/50 m-0 leading-relaxed text-sm">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="section-line max-w-7xl mx-auto" />
 
       {/* Program Structure */}
       <section id="program" className="py-24 lg:py-32">
@@ -249,7 +248,7 @@ const Home: NextPage = () => {
                 icon: AcademicCapIcon,
               },
             ].map((item, index) => (
-              <div key={index} className="bg-[#0a1628] p-8">
+              <div key={index} className="bg-[#0a0e1a] p-8">
                 <span className="step-indicator">{item.step}</span>
                 <h3 className="text-lg font-semibold text-white mt-4 mb-3">{item.title}</h3>
                 <p className="text-white/50 m-0 text-sm leading-relaxed">{item.description}</p>
@@ -262,17 +261,17 @@ const Home: NextPage = () => {
       {/* Divider */}
       <div className="section-line max-w-7xl mx-auto" />
 
-      {/* Curriculum */}
-      <section id="curriculum" className="py-24 lg:py-32">
+      {/* Curriculum - LIGHT */}
+      <section id="curriculum" className="py-24 lg:py-32 bg-[#f8f9fc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
-            <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">Curriculum Modules</h2>
-            <p className="text-lg text-white/50">
+            <h2 className="text-3xl lg:text-4xl font-semibold text-[#0a0e1a] mb-6">Curriculum Modules</h2>
+            <p className="text-lg text-[#0a0e1a]/50">
               Modular content that can be customized for your organization&apos;s specific requirements.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#0a0e1a]/5">
             {[
               {
                 title: "Blockchain Fundamentals",
@@ -308,9 +307,9 @@ const Home: NextPage = () => {
                 topics: "End-to-end deployment of a production-grade institutional application",
               },
             ].map((item, index) => (
-              <div key={index} className="bg-[#0a1628] p-6 hover:bg-white/[0.02] transition-colors">
-                <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-                <p className="text-white/40 text-sm m-0">{item.topics}</p>
+              <div key={index} className="bg-white p-6 hover:bg-[#0a0e1a]/[0.02] transition-colors">
+                <h3 className="text-[#0a0e1a] font-semibold mb-2">{item.title}</h3>
+                <p className="text-[#0a0e1a]/40 text-sm m-0">{item.topics}</p>
               </div>
             ))}
           </div>
@@ -371,19 +370,19 @@ const Home: NextPage = () => {
 
               <div className="grid grid-cols-2 gap-6 text-sm">
                 <div className="flex items-center gap-3 text-white/50">
-                  <GlobeAltIcon className="h-5 w-5 text-[#c9a227]" />
+                  <GlobeAltIcon className="h-5 w-5 text-[#00d4aa]" />
                   <span>Global Delivery</span>
                 </div>
                 <div className="flex items-center gap-3 text-white/50">
-                  <ClockIcon className="h-5 w-5 text-[#c9a227]" />
+                  <ClockIcon className="h-5 w-5 text-[#00d4aa]" />
                   <span>Flexible Scheduling</span>
                 </div>
                 <div className="flex items-center gap-3 text-white/50">
-                  <BuildingOffice2Icon className="h-5 w-5 text-[#c9a227]" />
+                  <BuildingOffice2Icon className="h-5 w-5 text-[#00d4aa]" />
                   <span>Onsite Available</span>
                 </div>
                 <div className="flex items-center gap-3 text-white/50">
-                  <UserGroupIcon className="h-5 w-5 text-[#c9a227]" />
+                  <UserGroupIcon className="h-5 w-5 text-[#00d4aa]" />
                   <span>Teams of 5-50+</span>
                 </div>
               </div>
@@ -402,7 +401,7 @@ const Home: NextPage = () => {
                   "Verifiable on-chain credentials",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-4">
-                    <CheckIcon className="h-5 w-5 text-[#c9a227] mt-0.5 shrink-0" />
+                    <CheckIcon className="h-5 w-5 text-[#00d4aa] mt-0.5 shrink-0" />
                     <span className="text-white/70">{item}</span>
                   </li>
                 ))}

@@ -35,25 +35,25 @@
 @plugin "daisyui/theme" {
   name: "dark";
 
-  /* Conservative Corporate Blue palette */
-  --color-primary: #c9a227; /* Gold accent */
-  --color-primary-content: #0a1628;
-  --color-secondary: #1a2744; /* Elevated navy */
+  /* institutions.ethereum.org color scheme */
+  --color-primary: #00d4aa; /* Ethereum teal/mint */
+  --color-primary-content: #0a0e1a;
+  --color-secondary: #141824;
   --color-secondary-content: #ffffff;
-  --color-accent: #4a7cbc; /* Corporate blue */
+  --color-accent: #627eea; /* Ethereum blue */
   --color-accent-content: #ffffff;
-  --color-neutral: #0a1628; /* Deep navy */
+  --color-neutral: #0a0e1a; /* Deep navy - almost black */
   --color-neutral-content: #ffffff;
-  --color-base-100: #0a1628; /* Main background - deep navy */
-  --color-base-200: #0e1c36; /* Elevated surfaces */
-  --color-base-300: #152240; /* Cards/panels */
-  --color-base-content: #ffffff; /* Text */
-  --color-info: #4a7cbc; /* Corporate blue */
-  --color-success: #4a9d6e;
-  --color-warning: #c9a227;
-  --color-error: #c54b4b;
+  --color-base-100: #0a0e1a; /* Main background */
+  --color-base-200: #0e1220; /* Elevated surfaces */
+  --color-base-300: #151a28; /* Cards/panels */
+  --color-base-content: #ffffff;
+  --color-info: #627eea;
+  --color-success: #00d4aa;
+  --color-warning: #f5a623;
+  --color-error: #e54d4d;
 
-  /* Sharp professional corners */
+  /* Sharp corners */
   --radius-field: 0;
   --radius-box: 0;
   --radius-btn: 0;
@@ -79,7 +79,7 @@
       "Segoe UI",
       Roboto,
       sans-serif;
-    background: #0a1628;
+    background: #0a0e1a;
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -129,10 +129,10 @@
 
 :root,
 [data-theme] {
-  background: #0a1628;
+  background: #0a0e1a;
 }
 
-/* Professional button styles */
+/* Button styles */
 .btn {
   @apply shadow-none transition-all duration-200 border-0 font-medium tracking-wide;
   border-radius: 0 !important;
@@ -145,11 +145,11 @@
 }
 
 .btn-primary {
-  @apply bg-[#c9a227] text-[#0a1628] font-semibold;
+  @apply bg-[#00d4aa] text-[#0a0e1a] font-semibold;
 }
 
 .btn-primary:hover {
-  @apply bg-[#b8921f];
+  @apply bg-[#00b896];
 }
 
 .btn-outline {
@@ -193,12 +193,28 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, #c9a227 0%, #4a7cbc 100%);
+  background: linear-gradient(180deg, #00d4aa 0%, #627eea 100%);
 }
 
-/* Gradient text for headlines */
+/* Feature card for light sections */
+.feature-highlight-light {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.feature-highlight-light::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #0a0e1a 0%, #627eea 100%);
+}
+
+/* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #c9a227 0%, #4a7cbc 100%);
+  background: linear-gradient(135deg, #00d4aa 0%, #627eea 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -217,7 +233,23 @@
   left: 0;
   width: 48px;
   height: 2px;
-  background: #c9a227;
+  background: #00d4aa;
+}
+
+/* Stats for light sections */
+.stat-block-light {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.stat-block-light::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 2px;
+  background: #0a0e1a;
 }
 
 /* Section separator */
@@ -230,7 +262,7 @@
 .quote-accent {
   font-size: 100px;
   line-height: 0.8;
-  color: rgba(201, 162, 39, 0.15);
+  color: rgba(0, 212, 170, 0.15);
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -239,7 +271,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #c9a227;
+  color: #00d4aa;
   font-weight: 500;
   transition: gap 0.2s ease;
 }
@@ -263,24 +295,24 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(201, 162, 39, 0.08);
-  border: 1px solid rgba(201, 162, 39, 0.2);
+  background: rgba(0, 212, 170, 0.08);
+  border: 1px solid rgba(0, 212, 170, 0.2);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #c9a227;
+  color: #00d4aa;
 }
 
 /* Subtle glow effect */
 .glow-subtle {
-  box-shadow: 0 0 60px rgba(74, 124, 188, 0.08);
+  box-shadow: 0 0 60px rgba(0, 212, 170, 0.08);
 }
 
 /* Professional focus states */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #c9a227;
+  outline: 2px solid #00d4aa;
   outline-offset: 2px;
 }
 
