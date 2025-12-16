@@ -28,19 +28,19 @@ export const Footer = () => {
                 href="https://ethereum.foundation/"
                 target="_blank"
                 rel="noreferrer"
-                className="opacity-40 hover:opacity-70 transition-opacity"
+                className="block hover:opacity-80 transition-opacity"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-8" />
+                <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10" />
               </a>
               <a
                 href="https://buidlguidl.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="opacity-40 hover:opacity-70 transition-opacity"
+                className="block hover:opacity-80 transition-opacity"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-6" />
+                <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-8" />
               </a>
             </div>
           </div>

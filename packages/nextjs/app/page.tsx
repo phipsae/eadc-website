@@ -80,23 +80,23 @@ const Home: NextPage = () => {
       <section className="py-12 border-y border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <p className="text-xs text-white/30 uppercase tracking-[0.2em] shrink-0">Developed in Partnership With</p>
-            <div className="flex items-center gap-12 lg:gap-16">
+            <p className="text-xs text-white/40 uppercase tracking-[0.2em] shrink-0">Developed in Partnership With</p>
+            <div className="flex items-center gap-6 lg:gap-8">
               <a
                 href="https://ethereum.foundation/"
                 target="_blank"
                 rel="noreferrer"
-                className="opacity-50 hover:opacity-80 transition-opacity"
+                className="block hover:opacity-80 transition-opacity"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10 lg:h-12" />
               </a>
-              <div className="h-8 w-px bg-white/10" />
+              <div className="h-8 w-px bg-white/20" />
               <a
                 href="https://buidlguidl.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="opacity-50 hover:opacity-80 transition-opacity"
+                className="block hover:opacity-80 transition-opacity"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-8 lg:h-10" />
