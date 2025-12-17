@@ -2,30 +2,6 @@
 
 @theme {
   --font-family-sans: var(--font-dm-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --shadow-center: 0 0 12px -2px rgb(0 0 0 / 0.05);
-  --animate-pulse-fast: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  --animate-fade-in: fade-in 0.8s ease-out forwards;
-  --animate-slide-up: slide-up 0.8s ease-out forwards;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @plugin "daisyui" {
@@ -36,39 +12,24 @@
   name: "dark";
 
   /* institutions.ethereum.org color scheme */
-  --color-primary: #00d4aa; /* Ethereum teal/mint */
+  --color-primary: #ffffff;
   --color-primary-content: #0a0e1a;
-  --color-secondary: #141824;
+  --color-secondary: #0a0e1a;
   --color-secondary-content: #ffffff;
-  --color-accent: #627eea; /* Ethereum blue */
-  --color-accent-content: #ffffff;
-  --color-neutral: #0a0e1a; /* Deep navy - almost black */
+  --color-neutral: #0a0e1a;
   --color-neutral-content: #ffffff;
-  --color-base-100: #0a0e1a; /* Main background */
-  --color-base-200: #0e1220; /* Elevated surfaces */
-  --color-base-300: #151a28; /* Cards/panels */
+  --color-base-100: #0a0e1a;
+  --color-base-200: #0e1220;
+  --color-base-300: #151a28;
   --color-base-content: #ffffff;
-  --color-info: #627eea;
-  --color-success: #00d4aa;
-  --color-warning: #f5a623;
-  --color-error: #e54d4d;
 
   /* Sharp corners */
   --radius-field: 0;
   --radius-box: 0;
   --radius-btn: 0;
-  --tt-tailw: 6px;
 }
 
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-base-300, currentColor);
-  }
-
   body {
     min-height: 100vh;
     font-family:
@@ -90,40 +51,16 @@
   h3,
   h4,
   h5,
-  h6,
-  p,
-  span,
-  div,
-  a,
-  button,
-  input,
-  textarea,
-  label,
-  li,
-  td,
-  th {
-    font-family:
-      var(--font-dm-sans),
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      sans-serif;
-  }
-
-  p {
-    margin: 1rem 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
+  h6 {
+    font-family: inherit;
     margin-bottom: 0.5rem;
     line-height: 1.1;
     font-weight: 600;
     letter-spacing: -0.02em;
+  }
+
+  p {
+    margin: 1rem 0;
   }
 }
 
@@ -132,191 +69,12 @@
   background: #0a0e1a;
 }
 
-/* Button styles */
-.btn {
-  @apply shadow-none transition-all duration-200 border-0 font-medium tracking-wide;
-  border-radius: 0 !important;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-.btn.btn-ghost {
-  @apply shadow-none;
-}
-
-.btn-primary {
-  @apply bg-[#00d4aa] text-[#0a0e1a] font-semibold;
-}
-
-.btn-primary:hover {
-  @apply bg-[#00b896];
-}
-
-.btn-outline {
-  @apply border border-white/20 text-white bg-transparent;
-}
-
-.btn-outline:hover {
-  @apply bg-white/5 border-white/40;
-}
-
-.link {
-  text-underline-offset: 2px;
-}
-
-.link:hover {
-  opacity: 80%;
-}
-
-/* Card styles */
-.corp-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.3s ease;
-}
-
-.corp-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.12);
-}
-
-/* Feature card with left accent */
-.feature-highlight {
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.feature-highlight::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, #00d4aa 0%, #627eea 100%);
-}
-
-/* Feature card for light sections */
-.feature-highlight-light {
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.feature-highlight-light::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, #0a0e1a 0%, #627eea 100%);
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #00d4aa 0%, #627eea 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Stats with underline accent */
-.stat-block {
-  position: relative;
-  padding-bottom: 1.5rem;
-}
-
-.stat-block::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 48px;
-  height: 2px;
-  background: #00d4aa;
-}
-
-/* Stats for light sections */
-.stat-block-light {
-  position: relative;
-  padding-bottom: 1.5rem;
-}
-
-.stat-block-light::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 48px;
-  height: 2px;
-  background: #0a0e1a;
-}
-
-/* Section separator */
-.section-line {
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
-}
-
-/* Quote styling */
-.quote-accent {
-  font-size: 100px;
-  line-height: 0.8;
-  color: rgba(0, 212, 170, 0.15);
-  font-family: Georgia, "Times New Roman", serif;
-}
-
-/* Arrow link animation */
-.arrow-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #00d4aa;
-  font-weight: 500;
-  transition: gap 0.2s ease;
-}
-
-.arrow-link:hover {
-  gap: 0.75rem;
-}
-
-/* Step indicator */
-.step-indicator {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.3);
-  text-transform: uppercase;
-}
-
-/* Enterprise badge */
-.enterprise-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: rgba(0, 212, 170, 0.08);
-  border: 1px solid rgba(0, 212, 170, 0.2);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #00d4aa;
-}
-
-/* Subtle glow effect */
-.glow-subtle {
-  box-shadow: 0 0 60px rgba(0, 212, 170, 0.08);
-}
-
-/* Professional focus states */
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid #00d4aa;
-  outline-offset: 2px;
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Link hover */
+.link:hover {
+  opacity: 80%;
 }
