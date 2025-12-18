@@ -4,15 +4,20 @@ import { useEffect, useLayoutEffect } from "react";
 import { AnimatedStatValue } from "./_components/AnimatedStatValue";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
+import { motion } from "motion/react";
 import type { NextPage } from "next";
 import {
+  AcademicCapIcon,
   ArrowRightIcon,
   BuildingOffice2Icon,
+  CheckBadgeIcon,
   CheckIcon,
+  ClipboardDocumentCheckIcon,
   ClockIcon,
   DocumentCheckIcon,
   LockClosedIcon,
   ShieldCheckIcon,
+  SparklesIcon,
 } from "@heroicons/react/24/outline";
 
 const Home: NextPage = () => {
@@ -263,29 +268,51 @@ const Home: NextPage = () => {
                 step: "01",
                 title: "Assessment",
                 description: "Comprehensive evaluation of current capabilities. Custom learning paths based on roles.",
+                icon: ClipboardDocumentCheckIcon,
               },
               {
                 step: "02",
                 title: "Foundations",
                 description: "Core blockchain concepts, Ethereum architecture, and smart contract fundamentals.",
+                icon: AcademicCapIcon,
               },
               {
                 step: "03",
                 title: "Specialization",
                 description: "Deep dives into DeFi, tokenization, L2 scaling, and security.",
+                icon: SparklesIcon,
               },
               {
                 step: "04",
                 title: "Certification",
                 description: "Capstone project deployment. Verified on-chain credentials.",
+                icon: CheckBadgeIcon,
               },
-            ].map((item, index) => (
-              <div key={index} className="border-t-2 border-[#0a0e1a] pt-6">
-                <span className="text-xs font-medium text-[#0a0e1a]/30 uppercase tracking-wider">{item.step}</span>
-                <h3 className="text-lg font-semibold text-[#0a0e1a] mt-3 mb-3">{item.title}</h3>
-                <p className="text-[#0a0e1a]/50 m-0 text-[15px] leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+            ].map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={index}>
+                  <motion.div
+                    className="mb-4"
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{
+                      duration: 1.4,
+                      delay: index * 0.3,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                  >
+                    <IconComponent className="h-8 w-8 text-[#0a0e1a]" />
+                  </motion.div>
+                  <div className="border-t-2 border-[#0a0e1a] pt-6">
+                    <span className="text-xs font-medium text-[#0a0e1a]/30 uppercase tracking-wider">{item.step}</span>
+                    <h3 className="text-lg font-semibold text-[#0a0e1a] mt-3 mb-3">{item.title}</h3>
+                    <p className="text-[#0a0e1a]/50 m-0 text-[15px] leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
