@@ -1,5 +1,13 @@
 import type { NextPage } from "next";
-import { ArrowRightIcon, CheckIcon, ClockIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowRightIcon,
+  BuildingOffice2Icon,
+  CheckIcon,
+  ClockIcon,
+  DocumentCheckIcon,
+  LockClosedIcon,
+  ShieldCheckIcon,
+} from "@heroicons/react/24/outline";
 
 const Home: NextPage = () => {
   return (
@@ -8,6 +16,12 @@ const Home: NextPage = () => {
       <section className="relative min-h-[85vh] flex items-center bg-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl">
+            {/* Enterprise badge */}
+            <div className="enterprise-badge mb-10">
+              <BuildingOffice2Icon className="h-4 w-4" />
+              Enterprise Training Program
+            </div>
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-[1.08] mb-8">
               <span className="text-white">Ethereum Application</span>
               <br />
@@ -19,7 +33,7 @@ const Home: NextPage = () => {
               Designed for banks, asset managers, and Fortune 500 companies.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-16">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#0a0e1a] px-8 py-4 font-medium hover:bg-white/90 transition-colors"
@@ -33,6 +47,22 @@ const Home: NextPage = () => {
               >
                 View Curriculum
               </a>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="flex flex-wrap gap-12 text-sm text-white/40">
+              <div className="flex items-center gap-3">
+                <ShieldCheckIcon className="h-5 w-5 text-white/60" />
+                <span>Compliance-Ready</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <LockClosedIcon className="h-5 w-5 text-white/60" />
+                <span>Security-First</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <DocumentCheckIcon className="h-5 w-5 text-white/60" />
+                <span>Verifiable Credentials</span>
+              </div>
             </div>
           </div>
         </div>
