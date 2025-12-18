@@ -13,7 +13,7 @@ export const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo-enterprise.svg" alt="ADC" className="h-7 w-7" />
+              <img src="/logo-2.png" alt="ADC" className="h-7 w-7" />
               <span className="font-semibold text-white text-sm">ADC</span>
             </div>
             <p className="text-white/40 text-sm m-0 leading-relaxed">
