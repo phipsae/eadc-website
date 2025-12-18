@@ -69,7 +69,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Partners - Dark */}
-      <section className="py-8 bg-[#0a0e1a] border-t border-white/5">
+      <section className="py-6 bg-[#0a0e1a] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <p className="text-xs text-white/40 uppercase tracking-[0.2em]">Developed in Partnership With</p>
@@ -78,19 +78,19 @@ const Home: NextPage = () => {
                 href="https://ethereum.foundation/"
                 target="_blank"
                 rel="noreferrer"
-                className="block opacity-60 hover:opacity-100 transition-opacity"
+                className="block opacity-80 hover:opacity-100 transition-opacity"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10" />
+                <img src="/logo-ef-white.png" alt="Ethereum Foundation" className="h-14" />
               </a>
               <a
                 href="https://buidlguidl.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="block opacity-60 hover:opacity-100 transition-opacity"
+                className="block opacity-80 hover:opacity-100 transition-opacity"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-8" />
+                <img src="/logo-bg-white.png" alt="BuidlGuidl" className="h-6" />
               </a>
             </div>
           </div>
