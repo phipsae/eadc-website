@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useLayoutEffect } from "react";
+import { AnimatedStatValue } from "./_components/AnimatedStatValue";
 import type { NextPage } from "next";
 import {
   ArrowRightIcon,
@@ -10,6 +14,54 @@ import {
 } from "@heroicons/react/24/outline";
 
 const Home: NextPage = () => {
+  useLayoutEffect(() => {
+    // Prevent automatic scroll on page load - run before paint
+    if (typeof window !== "undefined") {
+      // Remove hash from URL if present (but save it for later)
+      const hash = window.location.hash;
+      if (hash && !hash.match(/^#(contact|curriculum|program|why-adc)$/)) {
+        // Only allow specific hashes, clear others
+        window.history.replaceState(null, "", window.location.pathname);
+      }
+
+      // Force scroll to top immediately
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+
+      // Prevent scroll restoration
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    // Handle hash navigation only after page is fully loaded
+    if (typeof window !== "undefined" && window.location.hash) {
+      const handleHashScroll = () => {
+        const hash = window.location.hash;
+        const element = document.querySelector(hash);
+        if (element) {
+          // Use requestAnimationFrame to ensure DOM is ready
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              element.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+          });
+        }
+      };
+
+      // Wait for page to be fully loaded
+      if (document.readyState === "complete") {
+        handleHashScroll();
+      } else {
+        window.addEventListener("load", handleHashScroll);
+        return () => window.removeEventListener("load", handleHashScroll);
+      }
+    }
+  }, []);
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section - Dark */}
@@ -123,7 +175,10 @@ const Home: NextPage = () => {
                 { value: "$68.7B", label: "DeFi TVL", sublabel: "66%+ of all blockchains" },
               ].map((stat, index) => (
                 <div key={index}>
-                  <p className="text-3xl lg:text-4xl font-semibold text-[#0a0e1a] mb-2">{stat.value}</p>
+                  <AnimatedStatValue
+                    value={stat.value}
+                    className="text-3xl lg:text-4xl font-semibold text-[#0a0e1a] mb-2"
+                  />
                   <p className="text-[#0a0e1a]/60 text-sm m-0 leading-snug">
                     {stat.label}
                     <br />
