@@ -67,7 +67,7 @@ const Home: NextPage = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section - Dark */}
-      <section className="relative min-h-[85vh] flex items-center bg-[#0a0e1a] overflow-hidden">
+      <section className="relative min-h-screen flex items-center bg-[#0a0e1a] overflow-hidden pt-16">
         <BackgroundBeams />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl">
