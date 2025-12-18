@@ -72,7 +72,7 @@ const Home: NextPage = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section - Dark */}
-      <section className="relative min-h-screen flex items-center bg-[#0a0e1a] overflow-hidden pt-16">
+      <section className="relative min-h-screen flex items-center bg-teal-600 overflow-hidden pt-16">
         <BackgroundBeams />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl">
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-16">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#0a0e1a] px-8 py-4 font-medium hover:bg-white/90 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#0a0e1a] px-8 py-4 font-medium hover:bg-indigo-600 hover:text-white transition-colors"
               >
                 Request Program Details
                 <ArrowRightIcon className="h-4 w-4" />
@@ -129,7 +129,7 @@ const Home: NextPage = () => {
       </section>
 
       {/* Partners - Dark */}
-      <section className="py-6 bg-[#0a0e1a] border-t border-white/5">
+      <section className="py-6 bg-teal-700 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <p className="text-xs text-white/40 uppercase tracking-[0.2em]">Developed in Partnership With</p>
