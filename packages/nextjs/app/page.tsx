@@ -1,14 +1,88 @@
+"use client";
+
+import { useEffect, useLayoutEffect } from "react";
+import { AnimatedStatValue } from "./_components/AnimatedStatValue";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
+import { motion } from "motion/react";
 import type { NextPage } from "next";
-import { ArrowRightIcon, CheckIcon, ClockIcon } from "@heroicons/react/24/outline";
+import {
+  AcademicCapIcon,
+  ArrowRightIcon,
+  BuildingOffice2Icon,
+  CheckBadgeIcon,
+  CheckIcon,
+  ClipboardDocumentCheckIcon,
+  ClockIcon,
+  DocumentCheckIcon,
+  LockClosedIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
+} from "@heroicons/react/24/outline";
 
 const Home: NextPage = () => {
+  useLayoutEffect(() => {
+    // Prevent automatic scroll on page load - run before paint
+    if (typeof window !== "undefined") {
+      // Remove hash from URL if present (but save it for later)
+      const hash = window.location.hash;
+      if (hash && !hash.match(/^#(contact|curriculum|program|why-adc)$/)) {
+        // Only allow specific hashes, clear others
+        window.history.replaceState(null, "", window.location.pathname);
+      }
+
+      // Force scroll to top immediately
+      window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+
+      // Prevent scroll restoration
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    // Handle hash navigation only after page is fully loaded
+    if (typeof window !== "undefined" && window.location.hash) {
+      const handleHashScroll = () => {
+        const hash = window.location.hash;
+        const element = document.querySelector(hash);
+        if (element) {
+          // Use requestAnimationFrame to ensure DOM is ready
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              element.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+          });
+        }
+      };
+
+      // Wait for page to be fully loaded
+      if (document.readyState === "complete") {
+        handleHashScroll();
+      } else {
+        window.addEventListener("load", handleHashScroll);
+        return () => window.removeEventListener("load", handleHashScroll);
+      }
+    }
+  }, []);
+
   return (
     <div className="overflow-hidden">
       {/* Hero Section - Dark */}
-      <section className="relative min-h-[85vh] flex items-center bg-[#0a0e1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <section className="relative min-h-screen flex items-center bg-[#0a0e1a] overflow-hidden pt-16">
+        <BackgroundBeams />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-[1.08] mb-8">
+            {/* Enterprise badge */}
+            <div className="enterprise-badge mb-10">
+              <BuildingOffice2Icon className="h-4 w-4" />
+              Enterprise Training Program
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-6xl font-semibold mb-8 leading-[1.1]">
               <span className="text-white">Ethereum Application</span>
               <br />
               <span className="text-white/60">Developer Certification</span>
@@ -19,7 +93,7 @@ const Home: NextPage = () => {
               Designed for banks, asset managers, and Fortune 500 companies.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-16">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 bg-white text-[#0a0e1a] px-8 py-4 font-medium hover:bg-white/90 transition-colors"
@@ -34,12 +108,28 @@ const Home: NextPage = () => {
                 View Curriculum
               </a>
             </div>
+
+            {/* Trust indicators */}
+            <div className="flex flex-wrap gap-12 text-sm text-white/40">
+              <div className="flex items-center gap-3">
+                <ShieldCheckIcon className="h-5 w-5 text-white/60" />
+                <span>Compliance-Ready</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <LockClosedIcon className="h-5 w-5 text-white/60" />
+                <span>Security-First</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <DocumentCheckIcon className="h-5 w-5 text-white/60" />
+                <span>Verifiable Credentials</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Partners - Dark */}
-      <section className="py-8 bg-[#0a0e1a] border-t border-white/5">
+      <section className="py-6 bg-[#0a0e1a] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <p className="text-xs text-white/40 uppercase tracking-[0.2em]">Developed in Partnership With</p>
@@ -48,19 +138,19 @@ const Home: NextPage = () => {
                 href="https://ethereum.foundation/"
                 target="_blank"
                 rel="noreferrer"
-                className="block opacity-60 hover:opacity-100 transition-opacity"
+                className="block opacity-80 hover:opacity-100 transition-opacity"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo_ef.svg" alt="Ethereum Foundation" className="h-10" />
+                <img src="/logo-ef-white.png" alt="Ethereum Foundation" className="h-14" />
               </a>
               <a
                 href="https://buidlguidl.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="block opacity-60 hover:opacity-100 transition-opacity"
+                className="block opacity-80 hover:opacity-100 transition-opacity"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/logo_bg.svg" alt="BuidlGuidl" className="h-8" />
+                <img src="/logo-bg-white.png" alt="BuidlGuidl" className="h-6" />
               </a>
             </div>
           </div>
@@ -76,7 +166,7 @@ const Home: NextPage = () => {
                 Ethereum is the Backbone of the Onchain Economy
               </h2>
               <a
-                href="https://institutions.ethereum.org"
+                href="https://institutions.ethereum.org/data-hub"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-[#0a0e1a] font-medium hover:gap-3 transition-all"
@@ -93,7 +183,10 @@ const Home: NextPage = () => {
                 { value: "$68.7B", label: "DeFi TVL", sublabel: "66%+ of all blockchains" },
               ].map((stat, index) => (
                 <div key={index}>
-                  <p className="text-3xl lg:text-4xl font-semibold text-[#0a0e1a] mb-2">{stat.value}</p>
+                  <AnimatedStatValue
+                    value={stat.value}
+                    className="text-3xl lg:text-4xl font-semibold text-[#0a0e1a] mb-2"
+                  />
                   <p className="text-[#0a0e1a]/60 text-sm m-0 leading-snug">
                     {stat.label}
                     <br />
@@ -107,8 +200,15 @@ const Home: NextPage = () => {
       </section>
 
       {/* Why ADC - Dark */}
-      <section id="why-adc" className="py-24 lg:py-32 bg-[#0a0e1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="why-adc" className="relative py-24 lg:py-32 bg-[#0a0e1a] overflow-hidden">
+        <BackgroundRippleEffect
+          rows={12}
+          cols={30}
+          className="h-full"
+          borderColor="rgba(255, 255, 255, 0.07)"
+          fillColor="rgba(255, 255, 255, 0.02)"
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-[2.75rem] font-semibold text-white leading-tight mb-16">
             ADC Leads Where It Matters
           </h2>
@@ -146,7 +246,7 @@ const Home: NextPage = () => {
                   "Move beyond theory. Capstone projects deploy to testnets and integrate with real infrastructure providers and L2 networks.",
               },
             ].map((item, index) => (
-              <div key={index}>
+              <div key={index} className="relative z-10">
                 <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
                 <p className="text-white/50 m-0 leading-relaxed text-[15px]">{item.description}</p>
               </div>
@@ -168,29 +268,51 @@ const Home: NextPage = () => {
                 step: "01",
                 title: "Assessment",
                 description: "Comprehensive evaluation of current capabilities. Custom learning paths based on roles.",
+                icon: ClipboardDocumentCheckIcon,
               },
               {
                 step: "02",
                 title: "Foundations",
                 description: "Core blockchain concepts, Ethereum architecture, and smart contract fundamentals.",
+                icon: AcademicCapIcon,
               },
               {
                 step: "03",
                 title: "Specialization",
                 description: "Deep dives into DeFi, tokenization, L2 scaling, and security.",
+                icon: SparklesIcon,
               },
               {
                 step: "04",
                 title: "Certification",
                 description: "Capstone project deployment. Verified on-chain credentials.",
+                icon: CheckBadgeIcon,
               },
-            ].map((item, index) => (
-              <div key={index} className="border-t-2 border-[#0a0e1a] pt-6">
-                <span className="text-xs font-medium text-[#0a0e1a]/30 uppercase tracking-wider">{item.step}</span>
-                <h3 className="text-lg font-semibold text-[#0a0e1a] mt-3 mb-3">{item.title}</h3>
-                <p className="text-[#0a0e1a]/50 m-0 text-[15px] leading-relaxed">{item.description}</p>
-              </div>
-            ))}
+            ].map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div key={index}>
+                  <motion.div
+                    className="mb-4"
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{
+                      duration: 1.4,
+                      delay: index * 0.3,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                  >
+                    <IconComponent className="h-8 w-8 text-[#0a0e1a]" />
+                  </motion.div>
+                  <div className="border-t-2 border-[#0a0e1a] pt-6">
+                    <span className="text-xs font-medium text-[#0a0e1a]/30 uppercase tracking-wider">{item.step}</span>
+                    <h3 className="text-lg font-semibold text-[#0a0e1a] mt-3 mb-3">{item.title}</h3>
+                    <p className="text-[#0a0e1a]/50 m-0 text-[15px] leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
