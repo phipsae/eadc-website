@@ -159,7 +159,7 @@ const Home: NextPage = () => {
                 Ethereum is the Backbone of the Onchain Economy
               </h2>
               <a
-                href="https://institutions.ethereum.org"
+                href="https://institutions.ethereum.org/data-hub"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-[#0a0e1a] font-medium hover:gap-3 transition-all"
