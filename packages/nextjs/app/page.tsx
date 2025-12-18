@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect } from "react";
 import { AnimatedStatValue } from "./_components/AnimatedStatValue";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import type { NextPage } from "next";
 import {
@@ -66,8 +67,9 @@ const Home: NextPage = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section - Dark */}
-      <section className="relative min-h-[85vh] flex items-center bg-[#0a0e1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <section className="relative min-h-[85vh] flex items-center bg-[#0a0e1a] overflow-hidden">
+        <BackgroundBeams />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl">
             {/* Enterprise badge */}
             <div className="enterprise-badge mb-10">
