@@ -59,7 +59,7 @@ export const Header = () => {
     <header
       className="sticky top-0 z-50 w-full border-b border-white/10"
       style={{
-        backgroundColor: "rgba(10, 14, 26, 0.08)",
+        backgroundColor: "rgba(10, 14, 26, 0.14)",
         backdropFilter: "blur(8px)",
         WebkitBackdropFilter: "blur(8px)",
       }}
