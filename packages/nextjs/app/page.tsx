@@ -2,6 +2,7 @@
 
 import { useEffect, useLayoutEffect } from "react";
 import { AnimatedStatValue } from "./_components/AnimatedStatValue";
+import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 import type { NextPage } from "next";
 import {
   ArrowRightIcon,
@@ -192,8 +193,15 @@ const Home: NextPage = () => {
       </section>
 
       {/* Why ADC - Dark */}
-      <section id="why-adc" className="py-24 lg:py-32 bg-[#0a0e1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="why-adc" className="relative py-24 lg:py-32 bg-[#0a0e1a] overflow-hidden">
+        <BackgroundRippleEffect
+          rows={12}
+          cols={30}
+          className="h-full"
+          borderColor="rgba(255, 255, 255, 0.07)"
+          fillColor="rgba(255, 255, 255, 0.02)"
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-[2.75rem] font-semibold text-white leading-tight mb-16">
             ADC Leads Where It Matters
           </h2>
@@ -231,7 +239,7 @@ const Home: NextPage = () => {
                   "Move beyond theory. Capstone projects deploy to testnets and integrate with real infrastructure providers and L2 networks.",
               },
             ].map((item, index) => (
-              <div key={index}>
+              <div key={index} className="relative z-10">
                 <h3 className="text-lg font-semibold text-white mb-3">{item.title}</h3>
                 <p className="text-white/50 m-0 leading-relaxed text-[15px]">{item.description}</p>
               </div>
