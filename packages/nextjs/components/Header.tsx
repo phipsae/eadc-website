@@ -69,7 +69,7 @@ export const Header = () => {
           {/* Logo */}
           <Link href="/" passHref className="flex items-center gap-2.5 shrink-0">
             <div className="relative w-7 h-7">
-              <Image alt="Ethereum ADC" className="cursor-pointer" fill src="/logo-enterprise.svg" />
+              <Image alt="Ethereum ADC" className="cursor-pointer" fill src="/logo-2.png" />
             </div>
             <span className="font-semibold text-white text-sm tracking-tight">ADC</span>
           </Link>
