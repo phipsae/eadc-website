@@ -22,7 +22,7 @@ const Home: NextPage = () => {
               Enterprise Training Program
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-[1.08] mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-6xl font-semibold mb-8 leading-[1.1]">
               <span className="text-white">Ethereum Application</span>
               <br />
               <span className="text-white/60">Developer Certification</span>
